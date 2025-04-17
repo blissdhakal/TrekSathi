@@ -517,72 +517,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-28 bg-gray-50 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-white to-white/0"></div>
-        <div className="absolute -left-40 top-80 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute right-0 bottom-0 w-96 h-96 bg-emerald-600/5 rounded-full blur-3xl"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-20"
-          >
-            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium tracking-wide mb-5">
-              FEATURES
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose{" "}
-              <span className="relative inline-block">
-                <span className="relative z-10">Trek Sathi</span>
-                <span className="absolute -bottom-2 left-0 w-full h-3 bg-yellow-400 z-0"></span>
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform offers everything you need to make your trekking
-              adventures more social, organized, and memorable.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={containerVariants}
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col h-full group hover:-translate-y-2 border border-gray-100"
-              >
-                <div
-                  className={`w-14 h-14 ${feature.color} rounded-xl flex items-center justify-center mb-6 transition-colors duration-300`}
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 flex-grow mb-6">
-                  {feature.description}
-                </p>
-                <Link
-                  to="/features"
-                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
       <section className="py-16 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-700 z-0">
           {/* Optional pattern overlay */}
@@ -672,8 +606,76 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Features Section */}
+      <section className="py-28 bg-gray-50 relative overflow-hidden">
+        {/* Background decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-72 bg-gradient-to-b from-white to-white/0"></div>
+        <div className="absolute -left-40 top-80 w-80 h-80 bg-blue-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute right-0 bottom-0 w-96 h-96 bg-emerald-600/5 rounded-full blur-3xl"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-20"
+          >
+            <span className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-sm font-medium tracking-wide mb-5">
+              FEATURES
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Why Choose{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">Trek Sathi</span>
+                <span className="absolute -bottom-2 left-0 w-full h-3 bg-yellow-400 z-0"></span>
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our platform offers everything you need to make your trekking
+              adventures more social, organized, and memorable.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 flex flex-col h-full group hover:-translate-y-2 border border-gray-100"
+              >
+                <div
+                  className={`w-14 h-14 ${feature.color} rounded-xl flex items-center justify-center mb-6 transition-colors duration-300`}
+                >
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 flex-grow mb-6">
+                  {feature.description}
+                </p>
+                <Link
+                  to="/features"
+                  className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+     
+
       {/* Team Section */}
-      <section className="py-28 bg-white relative overflow-hidden">
+      {/* <section className="py-28 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:20px_20px] opacity-30"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
@@ -696,7 +698,7 @@ const Home = () => {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Trek Sathi was developed by a passionate team of Computer Science
-              students at Tribhuvan University.
+              students at Pokhara University.
             </p>
           </motion.div>
 
@@ -718,7 +720,7 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                  {/* Social icons */}
+                 
                   <div className="absolute bottom-0 w-full p-5 flex justify-center space-x-4 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
                     {Object.keys(member.social).map((platform) => (
                       <a
@@ -779,7 +781,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
