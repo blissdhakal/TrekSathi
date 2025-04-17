@@ -101,7 +101,7 @@ const Login = () => {
               )}
             </div>
 
-            {/* Password Input */}
+          
             <div className="space-y-2">
               <div className="relative">
                 <Lock className="absolute left-3 top-4 h-4 w-4 text-[#6366f1]" />
@@ -126,7 +126,7 @@ const Login = () => {
               )}
             </div>
 
-            {/* Submit Button */}
+           
             <Button
               type="submit"
               className="w-full h-12 bg-[#6366f1] hover:from-sky-500 hover:to-blue-400 text-white font-medium rounded-lg transition-all duration-300"
